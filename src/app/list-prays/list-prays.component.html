@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col" *ngFor="let pray of prays">
+      <div class="card ">
+        <img src="{{pray.image}}" class="card-img-top" height="120px" alt="Asr Prayer Image">
+        <div class="card-body">
+          <h5 class="card-title fs-3 mb-4 mt-3">{{ pray.name }}</h5>
+          <h1 class="fs-1 mb-5">{{ pray.time }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
