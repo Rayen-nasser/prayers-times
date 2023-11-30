@@ -1,7 +1,8 @@
-select,h2{
+select,h2,option{
   /* background-color: #2a231d; */
-  color: #2a231d;
+  color: #110b0a;
   background-color: transparent;
+  font-size: 25px;
 }
 .mb-6{
   margin-top: 70px;

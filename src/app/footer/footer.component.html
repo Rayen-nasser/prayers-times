@@ -1,11 +1,14 @@
 <div class="d-flex justify-content-center mb-6">
   <select
-    class="form-select form-select-lg  w-lg-25 w-sm-50 w-md-50 text-strat"
+    class="form-select form-select-lg w-lg-25 w-sm-50 w-md-50 text-strat"
     (change)="onCityChange($event)"
     [(ngModel)]="selectedCity"
   >
-  <option *ngFor="let city of cities" [value]="city.arabic + ' - ' + city.english">
-    {{ city.arabic }} - {{ city.english }}
-  </option>
+    <option
+      *ngFor="let city of cities"
+      [value]="city.arabic + ' - ' + city.english"
+    >
+      {{ city.arabic }} - {{ city.english }}
+    </option>
   </select>
 </div>

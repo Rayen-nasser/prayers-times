@@ -1,8 +1,15 @@
-h5{
-  color: #484544;
+.bg-card{
+  background-color: rgba(212, 190, 167, 0.5);;
+}
+h1:first-child{
+  color: #353334d2;
 }
 .rounded{
   border-radius: 10px !important;
+  border-color: #d4bea7 !important;
+}
+h1{
+  color: #110b0ae1;
 }
 
 .card {

@@ -25,7 +25,7 @@ export class HeaderComponent {
 
   updateTime(): void {
     moment.locale('ar-tn');
-    this.time = moment().format('MMMM Do YYYY | h:mm:ss ');
+    this.time = moment().format('MMMM Do YYYY | hh:mm:ss ');
   }
 
   ngOnInit(): void {

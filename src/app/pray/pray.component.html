@@ -1,7 +1,13 @@
-<div class="" [ngClass]="{'border border-4 border-success border-opacity-50 rounded': prayer.isNext}">
+<div
+  style="border-radius: 10px;"
+  class="text-center bg-card p-2 border "
+  [ngClass]="{
+    'border border-4 border-opacity-50 ': prayer.isNext
+  }"
+>
   <!-- <img src="{{ prayer.image }}" class="card-img-top" height="120px" alt="Asr Prayer Image"> -->
   <div class="card-body">
-    <h5 class="card-title fs-3 mb-4 mt-3">{{ prayer.name }}</h5>
+    <h1 class="card-title fs-3 mb-4 mt-4">{{ prayer.name }}</h1>
     <h1 class="fs-1 mb-4">{{ prayer.time }}</h1>
   </div>
 </div>

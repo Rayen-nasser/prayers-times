@@ -110,10 +110,9 @@ export class ApiTimePraysService {
       minutes:0,
       seconds:0
     }
+    
     const currentTime = moment();
-
     let remainingTime = moment(nextPrayer.time , 'hh:mm').diff(currentTime) ;
-    const targetTime = moment("00:00:00", "hh:mm:ss")
 
     if (remainingTime < 0) {
       const midNightDiff = moment('23:59:59', 'hh:mm:ss').diff(currentTime);
@@ -125,11 +124,6 @@ export class ApiTimePraysService {
       remainingTime = totalDiff;
     }
 
-
-    if (moment(remainingTime, "hh:mm:ss").isSame(targetTime)) {
-      // Navigate to AdkarOfPray component when remainingTime reaches the target time
-      this.router.navigate(['athkarAfterPray']);
-    }
 
     remainingFormTime.hours = moment.duration(remainingTime).hours()
     remainingFormTime.minutes = moment.duration(remainingTime).minutes()

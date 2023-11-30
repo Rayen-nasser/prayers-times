@@ -1,10 +1,13 @@
 <div class="container">
-  <div *ngIf="(isLoading$ | async)" class="d-flex justify-content-center mt-5 mb-5">
+  <div
+    *ngIf="isLoading$ | async"
+    class="d-flex justify-content-center mt-5 mb-5"
+  >
     <app-loading></app-loading>
   </div>
-  <div class="row mt-5 ">
+  <div class="row mt-5">
     <div class="col-lg col-md-4 col-sm-6 mb-4" *ngFor="let pray of prays">
       <app-pray [prayer]="pray"></app-pray>
-      </div>
+    </div>
   </div>
 </div>
