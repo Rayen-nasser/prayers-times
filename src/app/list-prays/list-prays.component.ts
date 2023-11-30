@@ -46,13 +46,19 @@ export class ListPraysComponent {
             }
 
             const prayTime = moment(pray.time, 'HH:mm:ss');
-            const targetTime = prayTime.format('HH:mm:ss'); // Convert the Moment object to a string
+            const time_Adkar_After_Pray = moment(pray.time, 'HH:mm:ss').add(18,'minutes');
 
-            if (currentTime === targetTime) {
-              const audio = new Audio('../../assets/mp3/adan.mp3');
+            const targetPrayTime = prayTime.format('HH:mm:ss');
+            const targetAdkarTime = time_Adkar_After_Pray.format('HH:mm:ss')
+
+            if (currentTime === targetPrayTime) {
+              const audio = new Audio('../../assets/mp3/adanNacer.mp3');
               audio.play();
-              this.router.navigate(['athkarAfterPray']);
               console.log('dgdg');
+            }
+
+            if(currentTime ===  targetAdkarTime){
+              this.router.navigate(['athkarAfterPray']);
             }
           }
 

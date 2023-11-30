@@ -12,8 +12,7 @@ import { ListPraysComponent } from './list-prays/list-prays.component';
 })
 export class AppComponent {
   title = 'Time Of Prays';
-  selectedCity: any = "";
-
+  selectedCity: any = '';
 
   showButton: boolean = true;
 
@@ -28,11 +27,9 @@ export class AppComponent {
 
   // Method to determine if the button should be hidden for the current route
   isButtonHiddenRoute(url: string): boolean {
-    const routesToHideButton = ['/listOfPrayers','athkarAfterPray']; // Add more routes if needed
-    return routesToHideButton.some(route => url.includes(route));
+    const routesToHideButton = ['/listOfPrayers', 'athkarAfterPray']; // Add more routes if needed
+    return routesToHideButton.some((route) => url.includes(route));
   }
-
-  // ... Other parts of your component
 
   toggleButton() {
     this.showButton = !this.showButton;
@@ -42,12 +39,5 @@ export class AppComponent {
     this.selectedCity = city;
   }
 
-  ngOnInit(): void {
-
-
-
-  }
-
-
-
+  ngOnInit(): void {}
 }

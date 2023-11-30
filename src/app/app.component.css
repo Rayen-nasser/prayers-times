@@ -1,7 +1,19 @@
 select,h2{
   background-color: #2a231d;
   color: #a8a09a;
-  
+
+}
+
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #4a423b;
+  font-size: 30px;
+}
+
+.mt-7{
+  margin-top: 160px;
 }
 
 

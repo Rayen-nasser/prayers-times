@@ -48,7 +48,7 @@ export class ApiTimePraysService {
             return {
               name: this.specifiedPrayersArabic[index],
               time: timingsData[prayerName],
-              image: '/assets/' + this.specifiedImages[index],
+              image: '/assets/images/' + this.specifiedImages[index],
               isNext: false
             };
           });
@@ -61,10 +61,6 @@ export class ApiTimePraysService {
       });
     }
 
-    // Specify a default return value or throw an error if needed
-    // For example:
-    // throw new Error('Invalid input');
-    // or return some default values if needed
     return Promise.resolve([]);
   }
 
@@ -110,7 +106,7 @@ export class ApiTimePraysService {
       minutes:0,
       seconds:0
     }
-    
+
     const currentTime = moment();
     let remainingTime = moment(nextPrayer.time , 'hh:mm').diff(currentTime) ;
 

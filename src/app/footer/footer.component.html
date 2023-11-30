@@ -1,8 +1,9 @@
 <div class="d-flex justify-content-center mb-6">
   <select
-    class="form-select form-select-lg w-lg-25 w-sm-50 w-md-50 text-strat"
+    class="form-select form-select-lg w-lg-25 w-sm-50 w-md-50 text-strat custom-select"
     (change)="onCityChange($event)"
     [(ngModel)]="selectedCity"
+    style="--bg-color: rgba(255, 255, 255, 0.7);"
   >
     <option
       *ngFor="let city of cities"

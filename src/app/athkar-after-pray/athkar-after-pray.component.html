@@ -1,16 +1,16 @@
-<div class="d-flex justify-content-center mt-3">
-  <div class="card w-50 text-center pt-3">
+<div class="d-flex justify-content-center mt-3" *ngIf="adkar && adkar[currentIndex]">
+  <div class="bg-card card lg-w-50 text-center pt-3">
     <div class="card-header fs-4 fw-bold">
-      {{ adkar[currentIndex].category }}
+      {{ adkar[currentIndex].category! }}
     </div>
     <div class="card-body">
       <p class="card-text fs-5 lh">{{ adkar[currentIndex].content }}</p>
       <p class="card-text">{{ adkar[currentIndex].description }}</p>
-      <p class="card-text text-muted">{{ adkar[currentIndex].count }}</p>
+      <p class="card-text text-muted fs-5">{{ adkar[currentIndex].count }}</p>
       {{ adkar[currentIndex].reference }}
     </div>
     <div class="card-footer text-muted">
-      <button class="btn btn-danger" (click)="displayNext()">
+      <button class="btn btn-dark" (click)="displayNext()">
         {{ this.count }}
       </button>
     </div>

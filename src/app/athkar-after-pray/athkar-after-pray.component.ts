@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiAthkarAfterPrayService } from '../service/api-athkar-after-pray.service';
 import { Adkar } from '../model/adkar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-athkar-after-pray',
@@ -12,12 +13,12 @@ export class AthkarAfterPrayComponent implements OnInit {
   currentIndex = 0;
   count = 0;
 
-  constructor(private apiService: ApiAthkarAfterPrayService) {}
+  constructor(private apiService: ApiAthkarAfterPrayService, private router: Router) {}
 
   ngOnInit() {
     this.apiService.getAthkar().subscribe(
       (data) => {
-        //console.log('Fetched data:', data.after_prayer);
+        //console.log('Fetched data:', data.after_prayer.length);
         this.adkar = data.after_prayer;
       },
       (error) => {
@@ -32,6 +33,12 @@ export class AthkarAfterPrayComponent implements OnInit {
         this.count = 0;
         this.currentIndex = (this.currentIndex + 1) % this.adkar.length;
       }, 500);
+    }
+
+    //console.log(this.currentIndex);
+
+    if(this.adkar.length - 1 === this.currentIndex){
+      this.router.navigate(['listOfPrayers']);
     }
     this.count++;
   }
