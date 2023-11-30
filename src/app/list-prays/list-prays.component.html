@@ -1,13 +1,10 @@
 <div class="container">
-  <div class="row mt-4">
-    <div class="col" *ngFor="let pray of prays">
-      <div class="card ">
-        <img src="{{pray.image}}" class="card-img-top" height="120px" alt="Asr Prayer Image">
-        <div class="card-body">
-          <h5 class="card-title fs-3 mb-4 mt-3">{{ pray.name }}</h5>
-          <h1 class="fs-1 mb-5">{{ pray.time }}</h1>
-        </div>
+  <div *ngIf="(isLoading$ | async)" class="d-flex justify-content-center mt-5 mb-5">
+    <app-loading></app-loading>
+  </div>
+  <div class="row mt-5 ">
+    <div class="col-lg col-md-4 col-sm-6 mb-4" *ngFor="let pray of prays">
+      <app-pray [prayer]="pray"></app-pray>
       </div>
-    </div>
   </div>
 </div>

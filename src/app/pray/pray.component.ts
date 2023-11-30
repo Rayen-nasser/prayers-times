@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Pray } from '../model/pray';
 
 @Component({
   selector: 'app-pray',
@@ -6,6 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pray.component.css']
 })
 export class PrayComponent {
-  @Input() prayerName: string = '';
-  @Input() prayerTime: string = '';
+
+  @Input() prayer!: any
+
+  ngOnInit(){
+    //console.log(this.prayer);
+
+  }
 }

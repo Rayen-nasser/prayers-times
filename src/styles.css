@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Import the Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Set global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+ background-image: url('https://th.bing.com/th/id/R.bab12bc833fc5c70984ccc37e9838944?rik=PpvWZlOWtQr9xA&pid=ImgRaw&r=0');
+ background-size: cover;
+
+
+}
+
+/* Applying the font to specific elements */
+h1, h2, h5 {
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+}

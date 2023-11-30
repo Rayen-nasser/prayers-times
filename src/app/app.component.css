@@ -1,24 +1,9 @@
-.custom-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Ensure the container takes up the available height */
-  padding: 10px;
-  border: 1px solid #ccc; /* Optional: Add a border for visualization */
+select,h2{
+  background-color: #2a231d;
+  color: #a8a09a;
+  
 }
 
-.custom-div img {
-  width: 100%; /* Adjust the width of the image */
-}
 
-.custom-div div {
-  margin-top: 10px; /* Optional: Add margin between image and text */
-}
 
-h2{
-  color: #9b948d;
-}
-h5
-{
-  color: #484544;
-}
+

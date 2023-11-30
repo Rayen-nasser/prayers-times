@@ -1,0 +1,23 @@
+select,h2{
+  /* background-color: #2a231d; */
+  color: #2a231d;
+  background-color: transparent;
+}
+.mb-6{
+  margin-top: 70px;
+}
+
+
+/* For large screens and above */
+@media (min-width: 992px) {
+  .w-lg-25 {
+    width: 25%;
+  }
+}
+
+/* For small screens */
+@media (max-width: 576px) {
+  .w-sm-25 {
+    width: 25%;
+  }
+}

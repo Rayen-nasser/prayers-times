@@ -1,0 +1,23 @@
+<div class="row border-dark-subtle border-bottom">
+  <div class="col-md-6">
+    <div class="p-3">
+      <h2 class="fs-4" >{{ time }}</h2>
+      <h1> {{ city }}</h1>
+      <a class="icon-link icon-link-hover" routerLink="athkarAfterPray" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        أذكار بعد السلام من الصلاة المفروضة
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="p-3">
+      <h2 class="fs-4" *ngIf="nextPrayer">متبقي من صلاة {{ nextPrayer.name }}</h2>
+      <h1>
+        {{  formatNumber(remainingFormTime.hours) + ":" + formatNumber(remainingFormTime.minutes) + ":" + formatNumber(remainingFormTime.seconds) + "-"}}
+      </h1>
+
+    </div>
+  </div>
+</div>

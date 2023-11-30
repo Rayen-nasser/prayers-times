@@ -1,7 +1,7 @@
 
 export class Pray {
   name: string = "";
-  time: Date | null = null;
+  time:  string = "";
   image: string = "";
 }
 

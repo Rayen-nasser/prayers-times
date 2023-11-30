@@ -7,15 +7,21 @@ import { ListPraysComponent } from './list-prays/list-prays.component';
 import { PrayComponent } from './pray/pray.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
 import { BidiModule } from '@angular/cdk/bidi';
+import { AthkarAfterPrayComponent } from './athkar-after-pray/athkar-after-pray.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoadingComponent } from './loading/loading.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ListPraysComponent,
-    PrayComponent
+    PrayComponent,
+    AthkarAfterPrayComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,9 +29,6 @@ import { BidiModule } from '@angular/cdk/bidi';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatGridListModule,
-    MatListModule,
-    MatCardModule,
     BidiModule
   ],
   providers: [],

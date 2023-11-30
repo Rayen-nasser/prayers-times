@@ -1,3 +1,16 @@
 h5{
   color: #484544;
 }
+.rounded{
+  border-radius: 10px !important;
+}
+
+.card {
+  /* Your existing styles */
+  transition: box-shadow 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}

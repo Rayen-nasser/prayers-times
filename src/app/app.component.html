@@ -1,21 +1,17 @@
-<div class="container" >
-  <!-- Grid for the top section -->
-  <div class="row  border-dark-subtle border-bottom">
-    <div class="col-md-6">
-      <div class="p-3 ">
-        <h2>2023/6/24</h2>
-        <h1>مكة المكرمة</h1>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="p-3 ">
-        <h2>متبقي حق صلاة المغرب</h2>
-        <h1>15:36</h1>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <!-- currency time and rest time  of next prayer -->
+  <app-header [cityInput]="selectedCity"></app-header>
 
   <!-- list of Prays -->
-  <app-list-prays></app-list-prays>
+  <div class="d-flex justify-content-center mt-5 mb-5" *ngIf="showButton" (click)="toggleButton() ">
+    <button class="btn btn-danger fs-3" routerLink="listOfPrayers" >أوقات الصلوات</button>
+  </div>
+  
+  <router-outlet></router-outlet>
+
+
+  <!-- select field -->
+  <app-footer (cityFromOutput)="handleCityChange($event)"></app-footer>
 
 </div>
+
