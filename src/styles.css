@@ -7,11 +7,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'IBM Plex Sans Arabic', sans-serif !important;
- background-image: url('https://th.bing.com/th/id/R.bab12bc833fc5c70984ccc37e9838944?rik=PpvWZlOWtQr9xA&pid=ImgRaw&r=0');
- background-size: cover;
-
-
+  background-size: cover;
 }
+
+/* For desktop or larger screens */
+@media (min-width: 768px) {
+  body {
+    background-image: url('https://th.bing.com/th/id/R.bab12bc833fc5c70984ccc37e9838944?rik=PpvWZlOWtQr9xA&pid=ImgRaw&r=0');
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  body {
+    background-image: url('https://live.staticflickr.com/1288/4595772447_b6b675b770_b.jpg');
+    background-repeat: no-repeat;
+  }
+  .m-top{
+    margin-bottom: 70px;
+    color: white !important;
+  }
+}
+
 
 /* Applying the font to specific elements */
 * {

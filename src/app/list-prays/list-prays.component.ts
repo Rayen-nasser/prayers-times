@@ -46,10 +46,13 @@ export class ListPraysComponent {
             }
 
             const prayTime = moment(pray.time, 'HH:mm:ss');
-            const time_Adkar_After_Pray = moment(pray.time, 'HH:mm:ss').add(18,'minutes');
+            const time_Adkar_After_Pray = moment(pray.time, 'HH:mm:ss').add(
+              18,
+              'minutes'
+            );
 
             const targetPrayTime = prayTime.format('HH:mm:ss');
-            const targetAdkarTime = time_Adkar_After_Pray.format('HH:mm:ss')
+            const targetAdkarTime = time_Adkar_After_Pray.format('HH:mm:ss');
 
             if (currentTime === targetPrayTime) {
               const audio = new Audio('../../assets/mp3/adanNacer.mp3');
@@ -57,7 +60,7 @@ export class ListPraysComponent {
               console.log('dgdg');
             }
 
-            if(currentTime ===  targetAdkarTime){
+            if (currentTime === targetAdkarTime) {
               this.router.navigate(['athkarAfterPray']);
             }
           }
