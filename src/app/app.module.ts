@@ -12,6 +12,7 @@ import { AthkarAfterPrayComponent } from './athkar-after-pray/athkar-after-pray.
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoadingComponent } from './loading/loading.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoadingComponent } from './loading/loading.component';
     HeaderComponent,
     FooterComponent,
     LoadingComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
